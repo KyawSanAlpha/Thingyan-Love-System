@@ -98,7 +98,7 @@ const REWARDS = [
   },
   {
     id: "voice_note",
-    name: "Voice Note + Video",
+    name: "Video",
     cost: 40,
     unlock:
       "For KaLayLay 🎬 — get one personal voice note and one little video from me: silly, sweet, and like a mini episode made only for my KaLayLay. 💙",
@@ -318,7 +318,7 @@ function renderMission() {
       "<p class=\"mission-wish-intro\"><strong>Mission:</strong> " +
       escapeHtml(state.currentMission.text) +
       "</p>" +
-      "<label class=\"prompt\" for=\"freeAnswer\">Your message</label>" +
+      "<label class=\"prompt\" for=\"freeAnswer\">KaLayLay's message</label>" +
       '<textarea id="freeAnswer"></textarea>' +
       '<p class="muted small-print">Write anything, just free messages or words and Mission complete. 💛</p>';
     var ta = document.getElementById("freeAnswer");
@@ -444,7 +444,7 @@ function voiceVideoBlockHtml() {
     var posterAttr = poster ? ' poster="' + escapeAttr(poster) + '"' : "";
     return (
       '<div class="reward-video-wrap">' +
-      '<p class="reward-video-label">Your video for KaLayLay 🎬</p>' +
+      '<p class="reward-video-label">My video for KaLayLay 🎬</p>' +
       '<video class="reward-video" controls playsinline preload="metadata"' +
       ' src="' +
       escapeAttr(url) +
