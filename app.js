@@ -17,7 +17,7 @@ const CONFIG = {
 
 /** Same prize for every mystery box (Secret Surprise). */
 const SURPRISE_PRIZE_TEXT =
-  "Congratulation: KaLayLay get 150000 Kyats as Thingyan Pocket Money.";
+  "Congratulation: KaLayLay gets 150000 Kyats as Thingyan Pocket Money.";
 
 const WISH_MISSION_ID = "m01";
 
@@ -58,12 +58,12 @@ const QUIZ = [
     correct: 2,
   },
   {
-    q: "Your smile in festival light is like…",
+    q: "KaLayLay's smile in festival light is like…",
     options: ["404 not found", "A cached happy response", "WEB not avaliable", "Waiting for network"],
     correct: 1,
   },
   {
-    q: "Ping test: I choose you with what uptime?",
+    q: "Ping test: Ko Ko choose KaLayLay with what uptime?",
     options: ["99%", "99.9%", "100% forever 💙", "Only on weekends"],
     correct: 2,
   },
@@ -73,7 +73,7 @@ const QUIZ = [
 const MYSTERY_MISSIONS = [
   {
     id: WISH_MISSION_ID,
-    text: "Write your free Thingyan message in the box—whatever you want to tell me—then tap Mission complete. 💛",
+    text: "Write KaLayLay's free Thingyan message in the box—whatever KaLayLay want to tell me—then tap Mission complete. 💛",
     points: 35,
   },
   { id: "m02", text: "Please, Tell one favorite memory of us", points: 16 },
@@ -94,7 +94,7 @@ const REWARDS = [
     name: "Cute Text Message",
     cost: 25,
     unlock:
-      "For my KaLayLay 💛 I’ll always be here for you. This cute letter is my promise: through every Thingyan splash and every quiet day, KaLayLay has got me. Soft words, big heart, only KaLayLay.",
+      "For my KaLayLay 💛 Ko Ko will always be here for KaLayLay. This cute letter is Ko Ko's promise: through every Thingyan splash and every quiet day, KaLayLay has got Ko Ko. Soft words, big heart, only KaLayLay.",
   },
   {
     id: "voice_note",
@@ -108,7 +108,7 @@ const REWARDS = [
     name: "Love Letter",
     cost: 50,
     unlock:
-      "For my KaLayLay ✉️  Only one person who is essential to my life. This love letter comes from my heart: every line says how much you matter, how my world is brighter with KaLayLay in it, and how Ko Ko always choose KaLayLay again and again.",
+      "For my KaLayLay ✉️  Only one person who is essential to Ko Ko's life. This love letter comes from Ko Ko's heart: every line says how much matter, how Ko Ko's world is brighter with KaLayLay in it, and how Ko Ko always choose KaLayLay again and again.",
   },
   {
     id: "surprise",
@@ -234,7 +234,7 @@ function renderQuiz() {
   optEl.innerHTML = "";
 
   if (state.quizIndex >= QUIZ.length) {
-    qEl.textContent = "Quiz module complete. Your love logic passed all checks. 💛";
+    qEl.textContent = "Quiz module complete. KaLayLay's love logic passed all checks. 💛";
     progEl.textContent = "All " + QUIZ.length + " questions cleared.";
     return;
   }
