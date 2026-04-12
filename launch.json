@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-chrome",
+      "request": "launch",
+      "name": "Open Thingyan app (index.html)",
+      "url": "file://${workspaceFolder}/index.html",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "pwa-chrome",
+      "request": "launch",
+      "name": "Open localhost:8080 (start a server first)",
+      "url": "http://localhost:8080/index.html",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "pwa-msedge",
+      "request": "launch",
+      "name": "Open in Edge (index.html)",
+      "url": "file://${workspaceFolder}/index.html",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}

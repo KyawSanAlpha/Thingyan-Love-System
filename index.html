@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <title>Thingyan Love System</title>
+  <link rel="stylesheet" href="styles.css?v=20260412f" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <h1>💛 Thingyan Love System</h1>
+      <span class="tag" id="buildTag">v3.2 · works on phone browsers · quiz · missions · gifts</span>
+      <p>
+        မင်္ဂလာပါ သက်ချစ်ရေ — like Thingyan water, my love splashes gentle and endless. This little system is only for you. 💙✨
+      </p>
+      <p class="stage-flow-hint" id="stageFlowHint">Step 1 — Love Quiz first, then missions and rewards.</p>
+    </header>
+
+    <div class="sys-msg" id="systemMessage" role="status">
+      Heart sync online. Thingyan mode: romantic · playful · ours.
+    </div>
+
+    <div class="dash dash--single">
+      <div class="card points-card points-card--simple" id="scoreCard">
+        <h3>💾 Love Points</h3>
+        <div class="val" id="displayPoints">0</div>
+      </div>
+    </div>
+
+    <section class="block stage-panel" id="stageQuiz" aria-labelledby="quiz-title">
+      <h2 id="quiz-title">💕 Step 1 — Love Logic Quiz</h2>
+      <p class="quiz-q" id="quizQuestion">Loading question…</p>
+      <div class="quiz-options" id="quizOptions"></div>
+      <p class="quiz-progress" id="quizProgress"></p>
+    </section>
+
+    <section class="block stage-panel hidden" id="stageMissions">
+      <h2>🎲 Step 2 — Festival missions (one-time each)</h2>
+      <p class="muted">
+        One mission is your <strong>free message</strong> (write in the app, then complete—no share buttons).
+        The rest are real-life prompts; each mission can be done only once.
+      </p>
+      <button type="button" class="btn btn-primary" id="genMission">New mission card</button>
+      <div class="mission-card empty" id="missionBox">Your mission card will appear here.</div>
+      <div class="btn-row hidden" id="missionCompleteRow">
+        <button type="button" class="btn btn-secondary" id="completeMission">Mission complete ✓</button>
+      </div>
+    </section>
+
+    <section class="block stage-panel hidden" id="stageShop">
+      <h2>🏪 Reward Shop</h2>
+      <div class="shop-grid" id="rewardShop"></div>
+      <div class="reward-vault" id="rewardVault" aria-live="polite">
+        <h3 class="reward-vault-title">🎁 Your unlocked gifts</h3>
+        <p class="muted reward-vault-hint">What you redeem shows here—my promises to you.</p>
+        <div id="rewardVaultFlash" class="reward-flash hidden" role="status"></div>
+        <div id="rewardVaultList" class="reward-vault-list"></div>
+      </div>
+    </section>
+
+    <div class="reset-row">
+      <button type="button" class="btn" id="resetAll">🔄 Factory reset (clear all saved data)</button>
+    </div>
+
+    <footer>
+      Thingyan Love System <strong>v3.2</strong> · localStorage · Made with 💛💙 · ချစ်တယ်
+      <br /><span class="footer-hint">Phone: open this page in Safari or Chrome—same as any website. Use https or a local server so video files load reliably.</span>
+    </footer>
+  </div>
+
+  <!-- Secret Surprise: three boxes, same prize — one reveal after you tap -->
+  <div id="mysteryOverlay" class="mystery-overlay hidden" aria-hidden="true" role="dialog" aria-labelledby="mysteryTitle">
+    <div class="mystery-backdrop" id="mysteryOverlayBackdrop" tabindex="-1"></div>
+    <div class="mystery-dialog">
+      <h3 id="mysteryTitle">Pick one mystery box, KaLayLay 🎁</h3>
+      <p class="muted mystery-sub">All three hide the same gift—tap any box once to open it.</p>
+      <div id="mysteryStage">
+        <div class="mystery-box-row">
+          <button type="button" class="mystery-box mystery-box--cute" data-variant="cute" aria-label="Cute mystery box">🎀</button>
+          <button type="button" class="mystery-box mystery-box--love" data-variant="love" aria-label="Love mystery box">💕</button>
+          <button type="button" class="mystery-box mystery-box--party" data-variant="party" aria-label="Celebration mystery box">🎉</button>
+        </div>
+      </div>
+      <div id="mysteryResult" class="mystery-result hidden"></div>
+      <button type="button" class="btn btn-outline mystery-cancel" id="mysteryCancelBtn">Cancel</button>
+    </div>
+  </div>
+
+  <script src="app.js?v=20260412f" defer></script>
+</body>
+</html>
