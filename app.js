@@ -12,7 +12,7 @@ const CONFIG = {
    */
   VOICE_VIDEO_URL: "videos/kalaylay.mp4",
   /** Optional poster image URL/path for the video (shown before play). */
-  VOICE_VIDEO_POSTER_URL: "",
+  VOICE_VIDEO_POSTER_URL: "videos/cover.jpg",
 };
 
 /** Same prize for every mystery box (Secret Surprise). */
