@@ -10,7 +10,7 @@ const CONFIG = {
    * Voice Note + Video: put an MP4 path (same folder as the site) or a full https URL.
    * Example: "videos/kalaylay.mp4" — leave empty to show the placeholder box instead.
    */
-  VOICE_VIDEO_URL: "videos/kalaylay.mp4",
+  VOICE_VIDEO_URL: "kalaylay.mp4",
   /** Optional poster image URL/path for the video (shown before play). */
   VOICE_VIDEO_POSTER_URL: "videos/cover.jpg",
 };
