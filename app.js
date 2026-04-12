@@ -17,7 +17,7 @@ const CONFIG = {
 
 /** Same prize for every mystery box (Secret Surprise). */
 const SURPRISE_PRIZE_TEXT =
-  "Congratulation: You get 1.5L Kyats as Thingyan Pocket Money.";
+  "Congratulation: KaLayLay get 150000 Kyats as Thingyan Pocket Money.";
 
 const WISH_MISSION_ID = "m01";
 
