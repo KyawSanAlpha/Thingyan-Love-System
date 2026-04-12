@@ -48,9 +48,9 @@ const QUIZ = [
     correct: 1,
   },
   {
-    q: "If our love is a program, what should it never have?",
+    q: "If our love is a program, what should it have?",
     options: ["Infinite loop of hugs", "Memory leaks of trust", "Syntax errors in kindness", "Bugs in loyalty"],
-    correct: 1,
+    correct: 0,
   },
   {
     q: "What is the best Thingyan deployment strategy for us?",
@@ -59,7 +59,7 @@ const QUIZ = [
   },
   {
     q: "Your smile in festival light is like…",
-    options: ["404 not found", "A cached happy response", "Latency spike", "Kernel panic"],
+    options: ["404 not found", "A cached happy response", "WEB not avaliable", "Waiting for network"],
     correct: 1,
   },
   {
@@ -76,14 +76,14 @@ const MYSTERY_MISSIONS = [
     text: "Write your free Thingyan message in the box—whatever you want to tell me—then tap Mission complete. 💛",
     points: 35,
   },
-  { id: "m02", text: "Tell me one favorite memory of us", points: 16 },
-  { id: "m03", text: "Send one yellow Padauk-color photo for bonus vibes 📸", points: 16 },
-  { id: "m04", text: "Record a short voice note: “Happy Thingyan, my love” 🎤", points: 18 },
-  { id: "m05", text: "Say one reason you still choose me", points: 15 },
+  { id: "m02", text: "Please, Tell one favorite memory of us", points: 16 },
+  { id: "m03", text: "Send one yellow Padauk-color photo for bonus vibes", points: 16 },
+  { id: "m04", text: "Record a short voice note: “Happy Thingyan Par Ko Ko Yay” ", points: 18 },
+  { id: "m05", text: "Say one reason KaLayLay still choose Ko Ko", points: 15 },
   { id: "m06", text: "Draw a tiny Padauk flower and send a photo", points: 18 },
-  { id: "m07", text: "Text: our love runs better than any API response", points: 14 },
+  { id: "m07", text: "Text: our love runs better than any connection response", points: 14 },
   { id: "m08", text: "Send a selfie with something sky-blue or sun-yellow", points: 14 },
-  { id: "m09", text: "Name one song that reminds you of us", points: 14 },
+  { id: "m09", text: "Name one song that reminds KaLayLay of our love", points: 14 },
   { id: "m10", text: "Plan our next mini-date in one voice message", points: 16 },
 ];
 
@@ -94,21 +94,21 @@ const REWARDS = [
     name: "Cute Text Message",
     cost: 25,
     unlock:
-      "For my KaLayLay 💛 — I’ll always be here for you. This cute letter is my promise: through every Thingyan splash and every quiet day, you’ve got me. Soft words, big heart, only you.",
+      "For my KaLayLay 💛 I’ll always be here for you. This cute letter is my promise: through every Thingyan splash and every quiet day, KaLayLay has got me. Soft words, big heart, only KaLayLay.",
   },
   {
     id: "voice_note",
     name: "Voice Note + Video",
     cost: 40,
     unlock:
-      "For KaLayLay 🎤🎬 — you get one personal voice note and one little video from me: silly, sweet, and yours—like a mini episode made only for you. 💙",
+      "For KaLayLay 🎬 — get one personal voice note and one little video from me: silly, sweet, and like a mini episode made only for my KaLayLay. 💙",
   },
   {
     id: "love_letter",
     name: "Love Letter",
     cost: 50,
     unlock:
-      "For my KaLayLay ✉️ — you are essential to my life. This love letter is the long version: every line says how much you matter, how my world is brighter with you in it, and how I choose you again and again.",
+      "For my KaLayLay ✉️  Only one person who is essential to my life. This love letter comes from my heart: every line says how much you matter, how my world is brighter with KaLayLay in it, and how Ko Ko always choose KaLayLay again and again.",
   },
   {
     id: "surprise",
@@ -302,10 +302,10 @@ function renderMission() {
     box.className = "mission-card empty";
     if (left.length === 0) {
       box.textContent =
-        "Every festival mission is complete—including your free message. You did all of them. 💛";
+        "Every festival mission is complete—including free message. KaLayLay did all of them. 💛";
     } else {
       box.textContent =
-        "No card yet. Tap “New mission card” for a random mission you haven’t finished.";
+        "No card yet. Tap “New mission card” for a random mission KaLayLay hasn’t finished.";
     }
     row.classList.add("hidden");
     return;
@@ -320,7 +320,7 @@ function renderMission() {
       "</p>" +
       "<label class=\"prompt\" for=\"freeAnswer\">Your message</label>" +
       '<textarea id="freeAnswer"></textarea>' +
-      '<p class="muted small-print">Write anything you want—no sharing buttons, just your words and Mission complete. 💛</p>';
+      '<p class="muted small-print">Write anything, just free messages or words and Mission complete. 💛</p>';
     var ta = document.getElementById("freeAnswer");
     if (ta) {
       ta.value = state.freeAnswer;
@@ -674,13 +674,13 @@ function generateMission() {
   if (left.length === 0) {
     state.currentMission = null;
     saveState();
-    setSystemMessage("No missions left — you finished everything. 💛");
+    setSystemMessage("No missions left — KaLayLay finished everything. 💛");
     renderMission();
     return;
   }
   var drawable = getDrawableMissions();
   if (drawable.length === 0) {
-    setSystemMessage("Finish the mission on your screen first, then draw another. 💛");
+    setSystemMessage("Finish the mission on screen first, then draw another. 💛");
     return;
   }
   var pick = drawable[Math.floor(Math.random() * drawable.length)];
@@ -690,7 +690,7 @@ function generateMission() {
     points: pick.points,
   };
   saveState();
-  setSystemMessage("Mission on screen—finish it once, then draw another if you can. 💙");
+  setSystemMessage("Mission on screen—finish it once, then draw another. 💙");
   renderAll();
 }
 
@@ -703,7 +703,7 @@ function completeMission() {
     var ta = document.getElementById("freeAnswer");
     state.freeAnswer = ((ta && ta.value) || state.freeAnswer || "").trim();
     if (!state.freeAnswer) {
-      setSystemMessage("Write your message before completing this mission. 💛");
+      setSystemMessage("Write KaLayLay's message before completing this mission. 💛");
       return;
     }
   }
@@ -715,7 +715,7 @@ function completeMission() {
   state.points = Math.max(0, state.points + pts);
   state.currentMission = null;
   saveState();
-  setSystemMessage("+" + pts + " pts—mission saved. Draw another if you have any left. 💛");
+  setSystemMessage("+" + pts + " pts—mission saved. Draw another if KaLayLay have any left. 💛");
   renderAll();
 }
 
