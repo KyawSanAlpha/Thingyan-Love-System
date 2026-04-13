@@ -10,7 +10,7 @@ const CONFIG = {
    * Voice Note + Video: put an MP4 path (same folder as the site) or a full https URL.
    * Example: "videos/kalaylay.mp4" — leave empty to show the placeholder box instead.
    */
-  VOICE_VIDEO_URL: "kalaylay.mp4",
+  VOICE_VIDEO_URL: "kalaylay2.mp4",
   /** Optional poster image URL/path for the video (shown before play). */
   VOICE_VIDEO_POSTER_URL: "videos/cover.jpg",
 };
@@ -101,7 +101,7 @@ const REWARDS = [
     name: "Video",
     cost: 40,
     unlock:
-      "For KaLayLay 🎬 — get one personal voice note and one little video from me: silly, sweet, and like a mini episode made only for my KaLayLay. 💙",
+      "For KaLayLay 🎬 — get one personal voice note and one little video from Ko Ko: silly, sweet, and like a mini episode made only for my KaLayLay. 💙",
   },
   {
     id: "love_letter",
@@ -274,7 +274,7 @@ function handleQuizAnswer(choice) {
   saveState();
   setSystemMessage(
     state.quizIndex >= QUIZ.length
-      ? "Quiz done! Missions and the shop are yours. 💛"
+      ? "Quiz done! Missions and the shop are all for KaLayLay. 💛"
       : correct
         ? "Yes! +" + pts + " love points — KaLayLay energy. 💛"
         : "Almost — still +" + pts + " points for playing. 💙"
